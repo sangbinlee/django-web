@@ -116,3 +116,10 @@ django web
      create mode 100644 django_web/wsgi.py
      create mode 100644 manage.py
     PS C:\Users\lsv40\PycharmProjects\django-web>
+
+
+# blog app 폴더 생성
+    PS C:\Users\lsv40\PycharmProjects\django-web> python.exe .\manage.py startapp blog
+
+# blog app 폴더 생성
+    PS C:\Users\lsv40\PycharmProjects\django-web> python.exe .\manage.py startapp single_pages
