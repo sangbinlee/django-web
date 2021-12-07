@@ -123,3 +123,81 @@ django web
 
 # blog app 폴더 생성
     PS C:\Users\lsv40\PycharmProjects\django-web> python.exe .\manage.py startapp single_pages
+
+# add app module [blog, single_pages] in settings.py
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'blog',
+        'single_pages'
+    ]
+
+# blog/models.py
+    from django.db import models
+    
+    # Create your models here.
+    from django.db import models
+    
+    
+    class Post(models.Model):
+        title = models.CharField(max_length=30)
+        content = models.TextField()
+        created_at = models.DateTimeField()
+
+
+
+
+# migrate
+    PS C:\Users\lsv40\PycharmProjects\django-web> python.exe .\manage.py makemigrations
+    Migrations for 'blog':
+      blog\migrations\0001_initial.py
+        - Create model Post
+    PS C:\Users\lsv40\PycharmProjects\django-web>
+
+# migrate
+    PS C:\Users\lsv40\PycharmProjects\django-web> python.exe .\manage.py migrate
+    Operations to perform:
+      Apply all migrations: admin, auth, blog, contenttypes, sessions
+    Running migrations:
+      Applying blog.0001_initial... OK
+    PS C:\Users\lsv40\PycharmProjects\django-web>
+
+# blog/admin.py 
+    from django.contrib import admin
+    
+    # Register your models here.
+    from django.contrib import admin
+    from .models import Post
+    
+    admin.site.register(Post)
+# python.exe .\manage.py runserver
+    
+# http://127.0.0.1:8000/admin
+
+
+# models.py change 
+    from django.db import models
+
+# Create your models here.
+    from django.db import models
+    
+    
+    class Post(models.Model):
+        title = models.CharField(max_length=30)
+        content = models.TextField()
+        created_at = models.DateTimeField()
+    
+        def __str__(self):
+            return f'[{self.pk}]{self.title}'
+
+# timezone change in settings.py
+
+    #TIME_ZONE = 'UTC'
+    TIME_ZONE = 'Asia/Seoul'
+             
+    #USE_TZ = True
+    USE_TZ = False
