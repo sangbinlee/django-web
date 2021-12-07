@@ -90,3 +90,29 @@ django web
 
 # step 8 
     http://127.0.0.1:8000/admin
+        sangbinlee9/sangbinlee9
+
+# step 9
+    PS C:\Users\lsv40\PycharmProjects\django-web> git add .
+    PS C:\Users\lsv40\PycharmProjects\django-web> git commit -m 'django 프로젝트 테스트 ...'
+    [main c1c2846] django 프로젝트 테스트 ...
+     19 files changed, 328 insertions(+)
+     create mode 100644 .gitignore
+     create mode 100644 .idea/.gitignore
+     create mode 100644 .idea/django-web.iml
+     create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+     create mode 100644 .idea/misc.xml
+     create mode 100644 .idea/modules.xml
+     create mode 100644 .idea/vcs.xml
+     create mode 100644 db.sqlite3
+     create mode 100644 django_web/__init__.py
+     create mode 100644 django_web/__pycache__/__init__.cpython-310.pyc
+     create mode 100644 django_web/__pycache__/settings.cpython-310.pyc
+     create mode 100644 django_web/__pycache__/urls.cpython-310.pyc
+     create mode 100644 django_web/__pycache__/wsgi.cpython-310.pyc
+     create mode 100644 django_web/asgi.py
+     create mode 100644 django_web/settings.py
+     create mode 100644 django_web/urls.py
+     create mode 100644 django_web/wsgi.py
+     create mode 100644 manage.py
+    PS C:\Users\lsv40\PycharmProjects\django-web>
